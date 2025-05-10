@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YourThinkTank.io</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto :wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -15,7 +16,7 @@
         }
 
         header {
-            background-color: #2c3e50;
+            background-color: rgba(44, 62, 80, 0.8);
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -49,20 +50,32 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #34495e, #1a252f);
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
             position: relative;
-            overflow: hidden;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
         }
 
         .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
             z-index: 1;
+            color: #fff;
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -248,6 +261,10 @@
     </header>
 
     <section id="home" class="hero">
+        <video autoplay loop muted playsinline>
+            <source src="background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-content">
             <h1>Unlocking Financial Insights with Advanced Quantitative Research</h1>
             <p>YourThinkTank.io is dedicated to innovative financial solutions.</p>
@@ -320,21 +337,34 @@
     </footer>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            fetch(form.action, {
-                method: form.method,
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('form-message').textContent = 'Thank you for your message!';
-                form.reset();
-            })
-            .catch(error => {
-                document.getElementById('form-message').textContent = 'An error occurred. Please try again.';
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scroll
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Form Submission Handling
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const form = event.target;
+                const formData = new FormData(form);
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('form-message').textContent = 'Thank you for your message!';
+                    form.reset();
+                })
+                .catch(error => {
+                    document.getElementById('form-message').textContent = 'An error occurred. Please try again.';
+                });
             });
         });
     </script>
