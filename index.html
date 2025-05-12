@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omega Trading Corp</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto :wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -30,10 +30,11 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
             margin: 0 15px;
         }
 
@@ -211,8 +212,11 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
             nav ul li {
-                display: block;
                 margin: 10px 0;
             }
 
@@ -252,7 +256,6 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#pillar"> Pillar</a></li>
                 <li><a href="#other-pillars">Other Pillars</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -266,36 +269,26 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1>Omega Trading Corp Building In Progress....</h1>
-            <p>solutions.</p>
+            <h1>Omega Trading Corp</h1>
+            <p>Incubating and Accelerating Innovative Ideas</p>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>With a background in proprietary innovation record of success.</p>
-        </div>
-    </section>
-
-    <section id="pillar">
-        <div class="container">
-            <h2>Pillar</h2>
-            <p>Our focuses on research proprietary knowledge. We leverage cutting-edge technology and data-driven methods to achieve superior results.</p>
-            <div class="data-visualization">
-                <p>Data Visualization Placeholder</p>
-            </div>
+            <p>Founded by Sanjay Nath Rathore, Omega Trading Corp is dedicated to fostering a culture of innovation and excellence. Our mission is to incubate and accelerate ideas that have the potential to reshape industries and drive economic growth. Sanjay has a background in civil engineering and has extensive experience in building investment vehicles with a consistent 16% to 20% return on investment weekly. His unique blend of technical expertise and financial acumen drives our innovative approach to the market.</p>
         </div>
     </section>
 
     <section id="other-pillars">
         <div class="container">
             <h2>Other Pillars</h2>
-            <p>Explore our other pillars and how they complement our research.</p>
+            <p>Explore our other pillars and how they complement our innovative approach to the market.</p>
             <ul>
-                <li>Research and Development</li>
-                <li>Technology Innovation</li>
-                <li>Strategic Partnerships</li>
+                <li><strong>Research and Development:</strong> We continuously explore new methodologies and technologies to enhance our research capabilities and stay ahead of the curve.</li>
+                <li><strong>Technology Innovation:</strong> Our team develops and implements advanced algorithms and systems to optimize our trading strategies and data analysis.</li>
+                <li><strong>Strategic Partnerships:</strong> We collaborate with leading institutions and experts to expand our network and access new opportunities.</li>
             </ul>
         </div>
     </section>
@@ -303,12 +296,13 @@
     <section id="team">
         <div class="container">
             <h2>Our Team</h2>
-            <p>Meet the experts</p>
+            <p>Meet the experts behind Omega Trading Corp.</p>
             <div class="team-member">
-                <img src="your-photo.jpg" alt="Your Name">
-                <h3>Your Name</h3>
-                <p>Background in reseach with notable achievements.</p>
+                <img src="your-photo.jpg" alt="Sanjay Nath Rathore">
+                <h3>Sanjay Nath Rathore</h3>
+                <p>Founder and CEO. Background in civil engineering with extensive experience in building investment vehicles that consistently achieve a 16% to 20% return on investment weekly.</p>
             </div>
+            <!-- Add more team members as needed -->
         </div>
     </section>
 
@@ -330,7 +324,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 OmegaTradingCorp.io. All rights reserved.</p>
+            <p>&copy; 2025 Omega Trading Corp. All rights reserved.</p>
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="terms-of-service.html">Terms of Service</a>
         </div>
