@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omega Trading Corp - OTC Token</title>
+<title>Omega Trading Corp - Equity Token Offering</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -299,8 +299,8 @@ nav ul li a:hover {
     100% { transform: scale(1); }
 }
 
-/* Token Utility Section */
-.token-utility {
+/* Simple Token Offering Section */
+.token-offering {
     padding: 100px 0;
     background-color: var(--ethereum-dark);
 }
@@ -323,111 +323,80 @@ nav ul li a:hover {
     color: rgba(255,255,255,0.7);
 }
 
-.utility-grid {
+.offering-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(30, 30, 48, 0.8);
+    border: 1px solid rgba(98, 126, 234, 0.3);
+    border-radius: 10px;
+}
+
+.offering-points {
+    margin-bottom: 40px;
+}
+
+.offering-point {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.offering-icon {
+    font-size: 24px;
+    color: var(--ethereum-blue);
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.offering-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.offering-content p {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+}
+
+.offering-cta {
+    text-align: center;
+}
+
+/* Company Performance Section */
+.performance {
+    padding: 100px 0;
+    background-color: #0F0F1A;
+}
+
+.performance-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.utility-card {
+.performance-card {
     background: rgba(30, 30, 48, 0.8);
-    border: 1px solid rgba(98, 126, 234, 0.3);
     border-radius: 10px;
-    padding: 40px 30px;
-    transition: all 0.3s ease;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(98, 126, 234, 0.3);
 }
 
-.utility-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    border-color: var(--ethereum-blue);
-}
-
-.utility-icon {
-    font-size: 40px;
-    color: var(--ethereum-blue);
-    margin-bottom: 20px;
-}
-
-.utility-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--text-light);
-}
-
-.utility-card p {
-    color: rgba(255,255,255,0.7);
-    line-height: 1.6;
-}
-
-/* Token Distribution Section */
-.token-distribution {
-    padding: 100px 0;
-    background-color: #0F0F1A;
-}
-
-.distribution-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.distribution-chart {
-    flex: 1;
-    min-width: 300px;
-    padding-right: 40px;
-}
-
-.distribution-info {
-    flex: 1;
-    min-width: 300px;
-}
-
-.distribution-info h2 {
+.performance-value {
     font-size: 42px;
-    margin-bottom: 30px;
-    color: var(--text-light);
-}
-
-.distribution-item {
-    margin-bottom: 20px;
-}
-
-.distribution-item-header {
-    display: flex;
-    justify-content: space-between;
+    font-weight: 700;
+    color: var(--ethereum-blue);
     margin-bottom: 10px;
 }
 
-.distribution-item h3 {
-    font-size: 18px;
-    color: var(--text-light);
-    margin: 0;
-}
-
-.distribution-item-percent {
-    font-weight: 700;
-    color: var(--ethereum-blue);
-}
-
-.distribution-bar {
-    height: 10px;
-    background: rgba(98, 126, 234, 0.2);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.distribution-progress {
-    height: 100%;
-    background: linear-gradient(90deg, var(--ethereum-blue), var(--accent-orange));
-    border-radius: 5px;
+.performance-label {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
 }
 
 /* Team Section */
@@ -589,7 +558,7 @@ footer {
         font-size: 18px;
     }
     
-    .cta-container, .distribution-container {
+    .cta-container {
         flex-direction: column;
     }
     
@@ -598,17 +567,8 @@ footer {
         margin-bottom: 40px;
     }
     
-    .distribution-chart {
-        padding-right: 0;
-        margin-bottom: 40px;
-    }
-    
     nav ul {
         display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
     }
 }
 
@@ -630,9 +590,8 @@ footer {
         <div class="logo">OTC TOKEN</div>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#token">Token</a></li>
-            <li><a href="#utility">Utility</a></li>
-            <li><a href="#distribution">Distribution</a></li>
+            <li><a href="#offering">Token Offering</a></li>
+            <li><a href="#performance">Performance</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -653,11 +612,11 @@ footer {
     </div>
     
     <div class="hero-content">
-        <h1>OMEGA TRADING CORP TOKEN</h1>
-        <p>The revolutionary OTC/ETH trading token with 16-20% weekly returns</p>
+        <h1>OMEGA TRADING CORP</h1>
+        <p>Own a piece of our company through our OTC/ETH token offering</p>
         <div class="cta-buttons">
-            <a href="YOUR_TOKEN_PURCHASE_LINK" class="btn btn-primary">BUY OTC TOKEN</a>
-            <a href="#token" class="btn btn-secondary">LEARN MORE</a>
+            <a href="YOUR_TOKEN_PURCHASE_LINK" class="btn btn-primary">BUY OTC TOKENS</a>
+            <a href="#offering" class="btn btn-secondary">LEARN MORE</a>
         </div>
     </div>
 </section>
@@ -665,8 +624,8 @@ footer {
 <section class="token-cta">
     <div class="cta-container">
         <div class="cta-text">
-            <h2>Join the Token Sale</h2>
-            <p>Participate in the OTC token offering and gain access to our proprietary trading algorithms and profit-sharing mechanisms.</p>
+            <h2>Equity Token Offering</h2>
+            <p>The OTC token represents direct ownership in Omega Trading Corp. Each token is backed by the company's assets and future profits.</p>
             
             <div class="cta-stats">
                 <div class="stat-box">
@@ -678,14 +637,14 @@ footer {
                     <div class="stat-label">Raised</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-value">85%</div>
-                    <div class="stat-label">Sold</div>
+                    <div class="stat-value">25%</div>
+                    <div class="stat-label">Equity Offered</div>
                 </div>
             </div>
             
             <div class="cta-buttons">
                 <a href="YOUR_TOKEN_PURCHASE_LINK" class="btn btn-primary">PURCHASE TOKENS</a>
-                <a href="#" class="btn btn-secondary">WHITEPAPER</a>
+                <a href="#" class="btn btn-secondary">LEGAL DOCUMENTS</a>
             </div>
         </div>
         
@@ -697,114 +656,76 @@ footer {
     </div>
 </section>
 
-<section id="utility" class="token-utility">
+<section id="offering" class="token-offering">
     <div class="section-header">
-        <h2>Token Utility</h2>
-        <p>The OTC token provides multiple benefits and use cases within the Omega Trading ecosystem</p>
+        <h2>Simple Equity Token</h2>
+        <p>The OTC token represents direct ownership in Omega Trading Corp with no additional utility or functions</p>
     </div>
     
-    <div class="utility-grid">
-        <div class="utility-card">
-            <div class="utility-icon">
-                <i class="fas fa-chart-line"></i>
+    <div class="offering-container">
+        <div class="offering-points">
+            <div class="offering-point">
+                <div class="offering-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="offering-content">
+                    <h3>Pure Equity Representation</h3>
+                    <p>Each OTC token represents a proportional share of Omega Trading Corp. The token's value is directly tied to the company's performance and assets.</p>
+                </div>
             </div>
-            <h3>Profit Sharing</h3>
-            <p>40% of platform profits are distributed to OTC token holders proportionally to their holdings.</p>
+            
+            <div class="offering-point">
+                <div class="offering-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="offering-content">
+                    <h3>Profit Participation</h3>
+                    <p>Token holders are entitled to their proportional share of company profits, distributed quarterly based on holdings.</p>
+                </div>
+            </div>
+            
+            <div class="offering-point">
+                <div class="offering-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="offering-content">
+                    <h3>OTC/ETH Trading Pair</h3>
+                    <p>The token trades exclusively against ETH, providing liquidity while maintaining direct exposure to the company's value.</p>
+                </div>
+            </div>
         </div>
         
-        <div class="utility-card">
-            <div class="utility-icon">
-                <i class="fas fa-percentage"></i>
-            </div>
-            <h3>Reduced Fees</h3>
-            <p>Discounts on trading fees based on the amount of OTC tokens held in your connected wallet.</p>
-        </div>
-        
-        <div class="utility-card">
-            <div class="utility-icon">
-                <i class="fas fa-vote-yea"></i>
-            </div>
-            <h3>Governance</h3>
-            <p>Vote on platform decisions, new features, and parameter changes using your OTC tokens.</p>
-        </div>
-        
-        <div class="utility-card">
-            <div class="utility-icon">
-                <i class="fas fa-lock"></i>
-            </div>
-            <h3>Staking Rewards</h3>
-            <p>Stake your OTC tokens to earn additional rewards and boost your profit share percentage.</p>
-        </div>
-        
-        <div class="utility-card">
-            <div class="utility-icon">
-                <i class="fas fa-tools"></i>
-            </div>
-            <h3>Premium Tools</h3>
-            <p>Access advanced trading tools, analytics, and signals based on your OTC token balance.</p>
-        </div>
-        
-        <div class="utility-card">
-            <div class="utility-icon">
-                <i class="fas fa-users"></i>
-            </div>
-            <h3>Community Access</h3>
-            <p>Exclusive access to private trading communities, AMAs, and educational resources.</p>
+        <div class="offering-cta">
+            <a href="YOUR_TOKEN_PURCHASE_LINK" class="btn btn-primary">BUY OTC TOKENS NOW</a>
         </div>
     </div>
 </section>
 
-<section id="distribution" class="token-distribution">
-    <div class="distribution-container">
-        <div class="distribution-chart">
-            <!-- Placeholder for chart - would be replaced with actual chart -->
-            <div style="width: 100%; height: 400px; background: rgba(98, 126, 234, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--ethereum-blue);">
-                [Token Distribution Chart]
-            </div>
+<section id="performance" class="performance">
+    <div class="section-header">
+        <h2>Company Performance</h2>
+        <p>Omega Trading Corp's track record of consistent returns</p>
+    </div>
+    
+    <div class="performance-grid">
+        <div class="performance-card">
+            <div class="performance-value">16-20%</div>
+            <div class="performance-label">Weekly Returns</div>
         </div>
         
-        <div class="distribution-info">
-            <h2>Token Distribution</h2>
-            
-            <div class="distribution-item">
-                <div class="distribution-item-header">
-                    <h3>Public Sale</h3>
-                    <span class="distribution-item-percent">60%</span>
-                </div>
-                <div class="distribution-bar">
-                    <div class="distribution-progress" style="width: 60%"></div>
-                </div>
-            </div>
-            
-            <div class="distribution-item">
-                <div class="distribution-item-header">
-                    <h3>Platform Development</h3>
-                    <span class="distribution-item-percent">20%</span>
-                </div>
-                <div class="distribution-bar">
-                    <div class="distribution-progress" style="width: 20%"></div>
-                </div>
-            </div>
-            
-            <div class="distribution-item">
-                <div class="distribution-item-header">
-                    <h3>Team (3-year vesting)</h3>
-                    <span class="distribution-item-percent">10%</span>
-                </div>
-                <div class="distribution-bar">
-                    <div class="distribution-progress" style="width: 10%"></div>
-                </div>
-            </div>
-            
-            <div class="distribution-item">
-                <div class="distribution-item-header">
-                    <h3>Marketing & Partnerships</h3>
-                    <span class="distribution-item-percent">10%</span>
-                </div>
-                <div class="distribution-bar">
-                    <div class="distribution-progress" style="width: 10%"></div>
-                </div>
-            </div>
+        <div class="performance-card">
+            <div class="performance-value">$15M</div>
+            <div class="performance-label">Assets Under Management</div>
+        </div>
+        
+        <div class="performance-card">
+            <div class="performance-value">3+</div>
+            <div class="performance-label">Years Track Record</div>
+        </div>
+        
+        <div class="performance-card">
+            <div class="performance-value">100%</div>
+            <div class="performance-label">Transparent Operations</div>
         </div>
     </div>
 </section>
@@ -833,8 +754,8 @@ footer {
             </div>
             <div class="team-info">
                 <h3>Alex Chen</h3>
-                <p>CTO</p>
-                <div class="bio">Blockchain architect with 10+ years experience in DeFi and smart contract development.</div>
+                <p>Head of Trading</p>
+                <div class="bio">Quantitative analyst specializing in algorithmic trading strategies across multiple asset classes.</div>
             </div>
         </div>
         
@@ -844,17 +765,17 @@ footer {
             </div>
             <div class="team-info">
                 <h3>Maria Rodriguez</h3>
-                <p>Head of Trading</p>
-                <div class="bio">Quantitative analyst specializing in algorithmic trading strategies across crypto markets.</div>
+                <p>CFO</p>
+                <div class="bio">Financial executive with 15 years experience in corporate finance and asset management.</div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="contact" class="token-utility" style="background-color: #0F0F1A;">
+<section id="contact" class="token-offering" style="background-color: #0F0F1A;">
     <div class="section-header">
         <h2>Contact Us</h2>
-        <p>Get in touch for partnership opportunities or token sale inquiries</p>
+        <p>Get in touch for investment inquiries</p>
     </div>
     
     <div style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
@@ -883,12 +804,11 @@ footer {
     <div class="footer-container">
         <div class="footer-logo">
             <div class="logo">OTC TOKEN</div>
-            <p>The revolutionary OTC/ETH trading token with 16-20% weekly returns.</p>
+            <p>Omega Trading Corp's equity token offering</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-medium"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
         
@@ -896,35 +816,33 @@ footer {
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#token">Token Sale</a></li>
-                <li><a href="#utility">Token Utility</a></li>
+                <li><a href="#offering">Token Offering</a></li>
+                <li><a href="#performance">Performance</a></li>
                 <li><a href="#team">Team</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-links">
-            <h3>Resources</h3>
-            <ul>
-                <li><a href="#">Whitepaper</a></li>
-                <li><a href="#">Audit Report</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">FAQ</a></li>
             </ul>
         </div>
         
         <div class="footer-links">
             <h3>Legal</h3>
             <ul>
+                <li><a href="#">Offering Memorandum</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Token Disclaimer</a></li>
                 <li><a href="#">Risk Disclosure</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-links">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="mailto:investors@omegatradingcorp.com">investors@omegatradingcorp.com</a></li>
+                <li><a href="#">+1 (555) 123-4567</a></li>
             </ul>
         </div>
     </div>
     
     <div class="footer-bottom">
-        <p>&copy; 2025 Omega Trading Corp. All rights reserved.</p>
+        <p>&copy; 2025 Omega Trading Corp. All rights reserved. This is not an offer to sell securities.</p>
     </div>
 </footer>
 
@@ -956,9 +874,6 @@ document.addEventListener('DOMContentLoaded', () => {
             this.reset();
         });
     }
-    
-    // Token countdown timer - placeholder
-    // You would implement actual countdown logic here
 });
 </script>
 </body>
