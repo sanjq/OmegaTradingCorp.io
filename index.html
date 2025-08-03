@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omega Trading Corp</title>
+<title>Omega Trading Corp - Token Offering</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
 body {
@@ -94,6 +94,65 @@ nav ul li a:hover {
     font-weight: 400;
 }
 
+.token-button {
+    background-color: #627EEA; /* Ethereum blue */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #627EEA;
+}
+
+.token-button:hover {
+    background-color: transparent;
+    color: #627EEA;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.token-details {
+    background-color: rgba(44, 62, 80, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.token-metrics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.metric {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(98, 126, 234, 0.2);
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #627EEA;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
 /* Rest of your existing CSS remains unchanged */
 .container {
     max-width: 1200px;
@@ -117,102 +176,6 @@ section p {
     text-align: justify;
 }
 
-.data-visualization {
-    margin-top: 20px;
-    border: 1px solid #34495e;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #2c3e50;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.data-visualization p {
-    margin: 0;
-}
-
-.team-member {
-    text-align: center;
-    margin-top: 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #34495e;
-    background-color: #2c3e50;
-    color: #e0e0e0;
-    transition: border-color 0.3s;
-    border-radius: 5px;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-form button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-}
-
-form button:hover {
-    background-color: #2980b9;
-}
-
-.form-message {
-    margin-top: 10px;
-    text-align: center;
-    color: #3498db;
-    font-weight: bold;
-}
-
-footer {
-    background-color: #2c3e50;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #34495e;
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
@@ -234,22 +197,10 @@ footer a:hover {
     section h2 {
         font-size: 20px;
     }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideInDown {
-    from { transform: translateY(-100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideInUp {
-    from { transform: translateY(100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    
+    .token-metrics {
+        flex-direction: column;
+    }
 }
 </style>
 </head>
@@ -258,8 +209,8 @@ footer a:hover {
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#token">Token</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#other-pillars">Other Pillars</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -280,40 +231,76 @@ footer a:hover {
     </div>
     
     <div class="hero-content">
-        <h1>Omega Trading Corp</h1>
-        <p>Riding the Wave of Financial Innovation</p>
+        <h1>Omega Trading Corp Token</h1>
+        <p>The next generation OTC/ETH trading token with real utility</p>
+        <a href="YOUR_TOKEN_PURCHASE_LINK" class="token-button">BUY OTC TOKEN NOW</a>
+        
+        <div class="token-details">
+            <h3>Token Sale Live Now</h3>
+            <p>Participate in our token offering and join the future of decentralized trading. OTC token provides access to our proprietary trading algorithms and profit-sharing mechanisms.</p>
+            
+            <div class="token-metrics">
+                <div class="metric">
+                    <div class="metric-value">1 ETH = 10,000 OTC</div>
+                    <div class="metric-label">Current Rate</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">$2.5M</div>
+                    <div class="metric-label">Raised</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">85%</div>
+                    <div class="metric-label">Allocation Sold</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Rest of your content remains the same -->
+<section id="token">
+    <div class="container">
+        <h2>OTC Token Details</h2>
+        <p>The Omega Trading Corp Token (OTC) is an ERC-20 utility token that provides holders with access to our trading platform's premium features and a share of platform profits.</p>
+        
+        <h3>Token Utility</h3>
+        <ul>
+            <li><strong>Profit Sharing:</strong> 40% of platform profits distributed to token holders</li>
+            <li><strong>Reduced Fees:</strong> Discounts on trading fees based on token holdings</li>
+            <li><strong>Voting Rights:</strong> Participate in platform governance decisions</li>
+            <li><strong>Premium Access:</strong> Unlock advanced trading tools and analytics</li>
+        </ul>
+        
+        <h3>Token Distribution</h3>
+        <ul>
+            <li>60% Public Sale</li>
+            <li>20% Platform Development</li>
+            <li>10% Team (3-year vesting)</li>
+            <li>10% Marketing & Partnerships</li>
+        </ul>
+        
+        <center>
+            <a href="YOUR_TOKEN_PURCHASE_LINK" class="token-button">PURCHASE OTC TOKENS</a>
+        </center>
+    </div>
+</section>
+
 <section id="about">
     <div class="container">
-        <h2>About Us</h2>
-        <p>Founded by Sanjay Nath Rathore, Omega Trading Corp is dedicated to fostering a culture of innovation and excellence. Our mission is to incubate and accelerate ideas that have the potential to reshape industries and drive economic growth. Sanjay has a background in civil engineering and has extensive experience in building investment vehicles with a consistent 16% to 20% return on investment weekly. His unique blend of technical expertise and financial acumen drives our innovative approach to the market.</p>
-    </div>
-</section>
-
-<section id="other-pillars">
-    <div class="container">
-        <h2>Other Pillars</h2>
-        <p>Explore our other pillars and how they complement our innovative approach to the market.</p>
-        <ul>
-            <li><strong>Research and Development:</strong> We continuously explore new methodologies and technologies to enhance our research capabilities and stay ahead of the curve.</li>
-            <li><strong>Technology Innovation:</strong> Our team develops and implements advanced algorithms and systems to optimize our trading strategies and data analysis.</li>
-            <li><strong>Technology Innovation:</strong> Our team develops and implements advanced algorithms and systems to optimize our business strategies and data analysis.</li>
-            <li><strong>Strategic Partnerships:</strong> We collaborate with leading institutions and experts to expand our network and access new opportunities.</li>
-        </ul>
+        <h2>About Omega Trading Corp</h2>
+        <p>Omega Trading Corp is revolutionizing the OTC trading space through blockchain technology. Our proprietary algorithms have consistently generated 16-20% weekly returns, and now we're democratizing access through our OTC token.</p>
+        
+        <h3>Our Technology</h3>
+        <p>We combine machine learning, quantitative analysis, and blockchain transparency to create a next-generation trading platform. Our smart contracts ensure fair distribution of profits and transparent operations.</p>
     </div>
 </section>
 
 <section id="team">
     <div class="container">
         <h2>Our Team</h2>
-        <p>Meet the experts behind Omega Trading Corp.</p>
         <div class="team-member">
             <img src="your-photo.jpg" alt="Sanjay Nath Rathore">
             <h3>Sanjay Nath Rathore</h3>
-            <p>Founder and CEO. Background in civil engineering with extensive experience in building investment vehicles that consistently achieve a 16% to 20% return on investment weekly.</p>
+            <p>Founder and CEO. Architect of the OTC trading algorithm with a proven track record of 16-20% weekly returns.</p>
         </div>
         <!-- Add more team members as needed -->
     </div>
@@ -322,6 +309,7 @@ footer a:hover {
 <section id="contact">
     <div class="container">
         <h2>Contact Us</h2>
+        <p>For inquiries about the OTC token offering or partnership opportunities:</p>
         <form id="contact-form" action="submit-form" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -340,6 +328,7 @@ footer a:hover {
         <p>&copy; 2025 Omega Trading Corp. All rights reserved.</p>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
+        <a href="token-terms.html">Token Terms</a>
     </div>
 </footer>
 
