@@ -95,28 +95,6 @@ nav ul li a:hover {
     font-weight: 400;
 }
 
-/* Audio controls styling */
-.audio-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 50px;
-}
-
-.audio-controls button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-/* Rest of your existing CSS remains the same */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -291,7 +269,7 @@ footer a:hover {
 <section id="home" class="hero">
     <!-- Tsunami video background -->
     <video autoplay loop muted playsinline id="bg-video">
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-huge-wave-about-to-crash-1229-large.mp4" type="video/mp4">
+        <source src="https://cdn.pixabay.com/vimeo/715300671/wave-118554.mp4?width=1280&hash=2b7b0d4c6c6f0c5f5b5f5b5f5b5f5b5f5b5f5b5f" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     
@@ -299,19 +277,8 @@ footer a:hover {
         <h1>Omega Trading Corp</h1>
         <p>Riding the Wave of Financial Innovation</p>
     </div>
-    
-    <!-- Audio controls for Rick Ross music -->
-    <div class="audio-controls">
-        <audio id="bg-music" loop>
-            <source src="https://musify.club/en/artist/rick-ross-1310" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <button id="play-btn">▶</button>
-        <button id="mute-btn">🔊</button>
-    </div>
 </section>
 
-<!-- Rest of your existing HTML remains the same -->
 <section id="about">
     <div class="container">
         <h2>About Us</h2>
@@ -400,38 +367,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Audio controls
-    const audio = document.getElementById('bg-music');
-    const playBtn = document.getElementById('play-btn');
-    const muteBtn = document.getElementById('mute-btn');
-    const video = document.getElementById('bg-video');
-    
     // Unmute video when user interacts
     document.body.addEventListener('click', function() {
-        video.muted = false;
-        // Try to play audio (most browsers require user interaction)
-        audio.play().catch(e => console.log("Audio play failed:", e));
+        document.getElementById('bg-video').muted = false;
     }, { once: true });
-    
-    playBtn.addEventListener('click', function() {
-        if (audio.paused) {
-            audio.play();
-            playBtn.textContent = '❚❚';
-        } else {
-            audio.pause();
-            playBtn.textContent = '▶';
-        }
-    });
-    
-    muteBtn.addEventListener('click', function() {
-        if (audio.muted) {
-            audio.muted = false;
-            muteBtn.textContent = '🔊';
-        } else {
-            audio.muted = true;
-            muteBtn.textContent = '🔇';
-        }
-    });
 });
 </script>
 </body>
